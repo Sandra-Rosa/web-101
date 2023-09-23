@@ -27,7 +27,7 @@ function App() {
   return (
     <div className="App">
       <h1>Abi's To Do List</h1>
-      <br/>
+      <br />
       <div className="header">
         <input
           type="text"
@@ -37,20 +37,27 @@ function App() {
         />
         <button onClick={addTask}>Add Task</button>
       </div>
-
-      <ul>
-        {tasks.map((task) => (
-          <li key={task.id}>
-            <span
-              style={{ textDecoration: task.done ? "line-through" : "none" }}
-            >
-              {task.text}
-            </span>
-            <button onClick={() => toggleDone(task.id)} id="done">Done</button>
-            <button onClick={() => deleteTask(task.id)} id="delete">Delete</button>
-          </li>
-        ))}
-      </ul>
+      <div className="task-row">
+        <ul>
+          {tasks.map((task) => (
+            <li key={task.id}>
+              <span
+                style={{ textDecoration: task.done ? "line-through" : "none" }}
+              >
+                {task.text}
+              </span>
+              <div className="buttons">
+                <button onClick={() => toggleDone(task.id)} id="done">
+                  Done
+                </button>
+                <button onClick={() => deleteTask(task.id)} id="delete">
+                  Delete
+                </button>
+              </div>
+            </li>
+          ))}
+        </ul>
+      </div>
     </div>
   );
 }
