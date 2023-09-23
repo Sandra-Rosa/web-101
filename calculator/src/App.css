@@ -1,10 +1,35 @@
-.app {
+*{
+  padding:0;
+  margin:0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+.App{
+  height:100vh;
+  display: flex;
+}
+.div1{
+  width: 50%;
+  height: 100vh;
+  background-color: #fbd34b;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 20px;
+  justify-items: space-between;
+  padding-top:50px;
 }
-
+.div1 h1{
+  font-family:'Poppins',sans-serif;
+  color:white;
+  text-align: center;
+  font-size: 40px;
+}
+.div2{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width:50%;
+  align-items: center;
+}
 .display {
   width: 210px;
   height: 40px;
